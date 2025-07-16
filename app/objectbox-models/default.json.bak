@@ -1,0 +1,117 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:2443087681900233751",
+      "lastPropertyId": "7:5328040056415081729",
+      "name": "AyaEntity",
+      "properties": [
+        {
+          "id": "1:5648474569663932884",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2718296378273841675",
+          "name": "sura",
+          "type": 6
+        },
+        {
+          "id": "3:4871507410665302697",
+          "name": "aya",
+          "type": 6
+        },
+        {
+          "id": "4:2198977413483926509",
+          "name": "text",
+          "type": 9
+        },
+        {
+          "id": "5:8872336630969323638",
+          "name": "md5",
+          "type": 9
+        },
+        {
+          "id": "7:5328040056415081729",
+          "name": "embedding",
+          "indexId": "2:1869925846410309555",
+          "type": 28,
+          "flags": 8
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:6765998920968946937",
+      "lastPropertyId": "9:4238051051577097315",
+      "name": "ChapterEntity",
+      "properties": [
+        {
+          "id": "1:3884380668918916911",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1721716271310128393",
+          "name": "sura",
+          "type": 5
+        },
+        {
+          "id": "3:4340309648645050105",
+          "name": "ayasCount",
+          "type": 5
+        },
+        {
+          "id": "4:1894054581102922998",
+          "name": "firstAyaId",
+          "type": 5
+        },
+        {
+          "id": "5:8701951286018604314",
+          "name": "nameArabic",
+          "type": 9
+        },
+        {
+          "id": "6:3303487914030169181",
+          "name": "nameTransliteration",
+          "type": 9
+        },
+        {
+          "id": "7:298251416068043313",
+          "name": "type",
+          "type": 9
+        },
+        {
+          "id": "8:7285802395343110036",
+          "name": "revelationOrder",
+          "type": 5
+        },
+        {
+          "id": "9:4238051051577097315",
+          "name": "rukus",
+          "type": 5
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "2:6765998920968946937",
+  "lastIndexId": "2:1869925846410309555",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [
+    5368328006819375657
+  ],
+  "retiredPropertyUids": [
+    2542611490373204597
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

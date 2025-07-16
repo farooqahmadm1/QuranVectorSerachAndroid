@@ -1,0 +1,1142 @@
+[
+  {
+    "sura": 1,
+    "ayas_count": 7,
+    "first_aya_id": 0,
+    "name_arabic": "الفاتحة",
+    "name_transliteration": "Al-Faatiha",
+    "type": "Meccan",
+    "revelation_order": 5,
+    "rukus": 1
+  },
+  {
+    "sura": 2,
+    "ayas_count": 286,
+    "first_aya_id": 7,
+    "name_arabic": "البقرة",
+    "name_transliteration": "Al-Baqara",
+    "type": "Medinan",
+    "revelation_order": 87,
+    "rukus": 40
+  },
+  {
+    "sura": 3,
+    "ayas_count": 200,
+    "first_aya_id": 293,
+    "name_arabic": "آل عمران",
+    "name_transliteration": "Aal-i-Imraan",
+    "type": "Medinan",
+    "revelation_order": 89,
+    "rukus": 20
+  },
+  {
+    "sura": 4,
+    "ayas_count": 176,
+    "first_aya_id": 493,
+    "name_arabic": "النساء",
+    "name_transliteration": "An-Nisaa",
+    "type": "Medinan",
+    "revelation_order": 92,
+    "rukus": 24
+  },
+  {
+    "sura": 5,
+    "ayas_count": 120,
+    "first_aya_id": 669,
+    "name_arabic": "المائدة",
+    "name_transliteration": "Al-Maaida",
+    "type": "Medinan",
+    "revelation_order": 112,
+    "rukus": 16
+  },
+  {
+    "sura": 6,
+    "ayas_count": 165,
+    "first_aya_id": 789,
+    "name_arabic": "الأنعام",
+    "name_transliteration": "Al-An'aam",
+    "type": "Meccan",
+    "revelation_order": 55,
+    "rukus": 20
+  },
+  {
+    "sura": 7,
+    "ayas_count": 206,
+    "first_aya_id": 954,
+    "name_arabic": "الأعراف",
+    "name_transliteration": "Al-A'raaf",
+    "type": "Meccan",
+    "revelation_order": 39,
+    "rukus": 24
+  },
+  {
+    "sura": 8,
+    "ayas_count": 75,
+    "first_aya_id": 1160,
+    "name_arabic": "الأنفال",
+    "name_transliteration": "Al-Anfaal",
+    "type": "Medinan",
+    "revelation_order": 88,
+    "rukus": 10
+  },
+  {
+    "sura": 9,
+    "ayas_count": 129,
+    "first_aya_id": 1235,
+    "name_arabic": "التوبة",
+    "name_transliteration": "At-Tawba",
+    "type": "Medinan",
+    "revelation_order": 113,
+    "rukus": 16
+  },
+  {
+    "sura": 10,
+    "ayas_count": 109,
+    "first_aya_id": 1364,
+    "name_arabic": "يونس",
+    "name_transliteration": "Yunus",
+    "type": "Meccan",
+    "revelation_order": 51,
+    "rukus": 11
+  },
+  {
+    "sura": 11,
+    "ayas_count": 123,
+    "first_aya_id": 1473,
+    "name_arabic": "هود",
+    "name_transliteration": "Hud",
+    "type": "Meccan",
+    "revelation_order": 52,
+    "rukus": 10
+  },
+  {
+    "sura": 12,
+    "ayas_count": 111,
+    "first_aya_id": 1596,
+    "name_arabic": "يوسف",
+    "name_transliteration": "Yusuf",
+    "type": "Meccan",
+    "revelation_order": 53,
+    "rukus": 12
+  },
+  {
+    "sura": 13,
+    "ayas_count": 43,
+    "first_aya_id": 1707,
+    "name_arabic": "الرعد",
+    "name_transliteration": "Ar-Ra'd",
+    "type": "Medinan",
+    "revelation_order": 96,
+    "rukus": 6
+  },
+  {
+    "sura": 14,
+    "ayas_count": 52,
+    "first_aya_id": 1750,
+    "name_arabic": "ابراهيم",
+    "name_transliteration": "Ibrahim",
+    "type": "Meccan",
+    "revelation_order": 72,
+    "rukus": 7
+  },
+  {
+    "sura": 15,
+    "ayas_count": 99,
+    "first_aya_id": 1802,
+    "name_arabic": "الحجر",
+    "name_transliteration": "Al-Hijr",
+    "type": "Meccan",
+    "revelation_order": 54,
+    "rukus": 6
+  },
+  {
+    "sura": 16,
+    "ayas_count": 128,
+    "first_aya_id": 1901,
+    "name_arabic": "النحل",
+    "name_transliteration": "An-Nahl",
+    "type": "Meccan",
+    "revelation_order": 70,
+    "rukus": 16
+  },
+  {
+    "sura": 17,
+    "ayas_count": 111,
+    "first_aya_id": 2029,
+    "name_arabic": "الإسراء",
+    "name_transliteration": "Al-Israa",
+    "type": "Meccan",
+    "revelation_order": 50,
+    "rukus": 12
+  },
+  {
+    "sura": 18,
+    "ayas_count": 110,
+    "first_aya_id": 2140,
+    "name_arabic": "الكهف",
+    "name_transliteration": "Al-Kahf",
+    "type": "Meccan",
+    "revelation_order": 69,
+    "rukus": 12
+  },
+  {
+    "sura": 19,
+    "ayas_count": 98,
+    "first_aya_id": 2250,
+    "name_arabic": "مريم",
+    "name_transliteration": "Maryam",
+    "type": "Meccan",
+    "revelation_order": 44,
+    "rukus": 6
+  },
+  {
+    "sura": 20,
+    "ayas_count": 135,
+    "first_aya_id": 2348,
+    "name_arabic": "طه",
+    "name_transliteration": "Taa-Haa",
+    "type": "Meccan",
+    "revelation_order": 45,
+    "rukus": 8
+  },
+  {
+    "sura": 21,
+    "ayas_count": 112,
+    "first_aya_id": 2483,
+    "name_arabic": "الأنبياء",
+    "name_transliteration": "Al-Anbiyaa",
+    "type": "Meccan",
+    "revelation_order": 73,
+    "rukus": 7
+  },
+  {
+    "sura": 22,
+    "ayas_count": 78,
+    "first_aya_id": 2595,
+    "name_arabic": "الحج",
+    "name_transliteration": "Al-Hajj",
+    "type": "Medinan",
+    "revelation_order": 103,
+    "rukus": 10
+  },
+  {
+    "sura": 23,
+    "ayas_count": 118,
+    "first_aya_id": 2673,
+    "name_arabic": "المؤمنون",
+    "name_transliteration": "Al-Muminoon",
+    "type": "Meccan",
+    "revelation_order": 74,
+    "rukus": 6
+  },
+  {
+    "sura": 24,
+    "ayas_count": 64,
+    "first_aya_id": 2791,
+    "name_arabic": "النور",
+    "name_transliteration": "An-Noor",
+    "type": "Medinan",
+    "revelation_order": 102,
+    "rukus": 9
+  },
+  {
+    "sura": 25,
+    "ayas_count": 77,
+    "first_aya_id": 2855,
+    "name_arabic": "الفرقان",
+    "name_transliteration": "Al-Furqaan",
+    "type": "Meccan",
+    "revelation_order": 42,
+    "rukus": 6
+  },
+  {
+    "sura": 26,
+    "ayas_count": 227,
+    "first_aya_id": 2932,
+    "name_arabic": "الشعراء",
+    "name_transliteration": "Ash-Shu'araa",
+    "type": "Meccan",
+    "revelation_order": 47,
+    "rukus": 11
+  },
+  {
+    "sura": 27,
+    "ayas_count": 93,
+    "first_aya_id": 3159,
+    "name_arabic": "النمل",
+    "name_transliteration": "An-Naml",
+    "type": "Meccan",
+    "revelation_order": 48,
+    "rukus": 7
+  },
+  {
+    "sura": 28,
+    "ayas_count": 88,
+    "first_aya_id": 3252,
+    "name_arabic": "القصص",
+    "name_transliteration": "Al-Qasas",
+    "type": "Meccan",
+    "revelation_order": 49,
+    "rukus": 8
+  },
+  {
+    "sura": 29,
+    "ayas_count": 69,
+    "first_aya_id": 3340,
+    "name_arabic": "العنكبوت",
+    "name_transliteration": "Al-Ankaboot",
+    "type": "Meccan",
+    "revelation_order": 85,
+    "rukus": 7
+  },
+  {
+    "sura": 30,
+    "ayas_count": 60,
+    "first_aya_id": 3409,
+    "name_arabic": "الروم",
+    "name_transliteration": "Ar-Room",
+    "type": "Meccan",
+    "revelation_order": 84,
+    "rukus": 6
+  },
+  {
+    "sura": 31,
+    "ayas_count": 34,
+    "first_aya_id": 3469,
+    "name_arabic": "لقمان",
+    "name_transliteration": "Luqman",
+    "type": "Meccan",
+    "revelation_order": 57,
+    "rukus": 3
+  },
+  {
+    "sura": 32,
+    "ayas_count": 30,
+    "first_aya_id": 3503,
+    "name_arabic": "السجدة",
+    "name_transliteration": "As-Sajda",
+    "type": "Meccan",
+    "revelation_order": 75,
+    "rukus": 3
+  },
+  {
+    "sura": 33,
+    "ayas_count": 73,
+    "first_aya_id": 3533,
+    "name_arabic": "الأحزاب",
+    "name_transliteration": "Al-Ahzaab",
+    "type": "Medinan",
+    "revelation_order": 90,
+    "rukus": 9
+  },
+  {
+    "sura": 34,
+    "ayas_count": 54,
+    "first_aya_id": 3606,
+    "name_arabic": "سبإ",
+    "name_transliteration": "Saba",
+    "type": "Meccan",
+    "revelation_order": 58,
+    "rukus": 6
+  },
+  {
+    "sura": 35,
+    "ayas_count": 45,
+    "first_aya_id": 3660,
+    "name_arabic": "فاطر",
+    "name_transliteration": "Faatir",
+    "type": "Meccan",
+    "revelation_order": 43,
+    "rukus": 5
+  },
+  {
+    "sura": 36,
+    "ayas_count": 83,
+    "first_aya_id": 3705,
+    "name_arabic": "يس",
+    "name_transliteration": "Yaseen",
+    "type": "Meccan",
+    "revelation_order": 41,
+    "rukus": 5
+  },
+  {
+    "sura": 37,
+    "ayas_count": 182,
+    "first_aya_id": 3788,
+    "name_arabic": "الصافات",
+    "name_transliteration": "As-Saaffaat",
+    "type": "Meccan",
+    "revelation_order": 56,
+    "rukus": 5
+  },
+  {
+    "sura": 38,
+    "ayas_count": 88,
+    "first_aya_id": 3970,
+    "name_arabic": "ص",
+    "name_transliteration": "Saad",
+    "type": "Meccan",
+    "revelation_order": 38,
+    "rukus": 5
+  },
+  {
+    "sura": 39,
+    "ayas_count": 75,
+    "first_aya_id": 4058,
+    "name_arabic": "الزمر",
+    "name_transliteration": "Az-Zumar",
+    "type": "Meccan",
+    "revelation_order": 59,
+    "rukus": 8
+  },
+  {
+    "sura": 40,
+    "ayas_count": 85,
+    "first_aya_id": 4133,
+    "name_arabic": "غافر",
+    "name_transliteration": "Al-Ghaafir",
+    "type": "Meccan",
+    "revelation_order": 60,
+    "rukus": 9
+  },
+  {
+    "sura": 41,
+    "ayas_count": 54,
+    "first_aya_id": 4218,
+    "name_arabic": "فصلت",
+    "name_transliteration": "Fussilat",
+    "type": "Meccan",
+    "revelation_order": 61,
+    "rukus": 6
+  },
+  {
+    "sura": 42,
+    "ayas_count": 53,
+    "first_aya_id": 4272,
+    "name_arabic": "الشورى",
+    "name_transliteration": "Ash-Shura",
+    "type": "Meccan",
+    "revelation_order": 62,
+    "rukus": 5
+  },
+  {
+    "sura": 43,
+    "ayas_count": 89,
+    "first_aya_id": 4325,
+    "name_arabic": "الزخرف",
+    "name_transliteration": "Az-Zukhruf",
+    "type": "Meccan",
+    "revelation_order": 63,
+    "rukus": 7
+  },
+  {
+    "sura": 44,
+    "ayas_count": 59,
+    "first_aya_id": 4414,
+    "name_arabic": "الدخان",
+    "name_transliteration": "Ad-Dukhaan",
+    "type": "Meccan",
+    "revelation_order": 64,
+    "rukus": 3
+  },
+  {
+    "sura": 45,
+    "ayas_count": 37,
+    "first_aya_id": 4473,
+    "name_arabic": "الجاثية",
+    "name_transliteration": "Al-Jaathiya",
+    "type": "Meccan",
+    "revelation_order": 65,
+    "rukus": 4
+  },
+  {
+    "sura": 46,
+    "ayas_count": 35,
+    "first_aya_id": 4510,
+    "name_arabic": "الأحقاف",
+    "name_transliteration": "Al-Ahqaf",
+    "type": "Meccan",
+    "revelation_order": 66,
+    "rukus": 4
+  },
+  {
+    "sura": 47,
+    "ayas_count": 38,
+    "first_aya_id": 4545,
+    "name_arabic": "محمد",
+    "name_transliteration": "Muhammad",
+    "type": "Medinan",
+    "revelation_order": 95,
+    "rukus": 4
+  },
+  {
+    "sura": 48,
+    "ayas_count": 29,
+    "first_aya_id": 4583,
+    "name_arabic": "الفتح",
+    "name_transliteration": "Al-Fath",
+    "type": "Medinan",
+    "revelation_order": 111,
+    "rukus": 4
+  },
+  {
+    "sura": 49,
+    "ayas_count": 18,
+    "first_aya_id": 4612,
+    "name_arabic": "الحجرات",
+    "name_transliteration": "Al-Hujuraat",
+    "type": "Medinan",
+    "revelation_order": 106,
+    "rukus": 2
+  },
+  {
+    "sura": 50,
+    "ayas_count": 45,
+    "first_aya_id": 4630,
+    "name_arabic": "ق",
+    "name_transliteration": "Qaaf",
+    "type": "Meccan",
+    "revelation_order": 34,
+    "rukus": 3
+  },
+  {
+    "sura": 51,
+    "ayas_count": 60,
+    "first_aya_id": 4675,
+    "name_arabic": "الذاريات",
+    "name_transliteration": "Adh-Dhaariyat",
+    "type": "Meccan",
+    "revelation_order": 67,
+    "rukus": 3
+  },
+  {
+    "sura": 52,
+    "ayas_count": 49,
+    "first_aya_id": 4735,
+    "name_arabic": "الطور",
+    "name_transliteration": "At-Tur",
+    "type": "Meccan",
+    "revelation_order": 76,
+    "rukus": 2
+  },
+  {
+    "sura": 53,
+    "ayas_count": 62,
+    "first_aya_id": 4784,
+    "name_arabic": "النجم",
+    "name_transliteration": "An-Najm",
+    "type": "Meccan",
+    "revelation_order": 23,
+    "rukus": 3
+  },
+  {
+    "sura": 54,
+    "ayas_count": 55,
+    "first_aya_id": 4846,
+    "name_arabic": "القمر",
+    "name_transliteration": "Al-Qamar",
+    "type": "Meccan",
+    "revelation_order": 37,
+    "rukus": 3
+  },
+  {
+    "sura": 55,
+    "ayas_count": 78,
+    "first_aya_id": 4901,
+    "name_arabic": "الرحمن",
+    "name_transliteration": "Ar-Rahmaan",
+    "type": "Medinan",
+    "revelation_order": 97,
+    "rukus": 3
+  },
+  {
+    "sura": 56,
+    "ayas_count": 96,
+    "first_aya_id": 4979,
+    "name_arabic": "الواقعة",
+    "name_transliteration": "Al-Waaqia",
+    "type": "Meccan",
+    "revelation_order": 46,
+    "rukus": 3
+  },
+  {
+    "sura": 57,
+    "ayas_count": 29,
+    "first_aya_id": 5075,
+    "name_arabic": "الحديد",
+    "name_transliteration": "Al-Hadid",
+    "type": "Medinan",
+    "revelation_order": 94,
+    "rukus": 4
+  },
+  {
+    "sura": 58,
+    "ayas_count": 22,
+    "first_aya_id": 5104,
+    "name_arabic": "المجادلة",
+    "name_transliteration": "Al-Mujaadila",
+    "type": "Medinan",
+    "revelation_order": 105,
+    "rukus": 3
+  },
+  {
+    "sura": 59,
+    "ayas_count": 24,
+    "first_aya_id": 5126,
+    "name_arabic": "الحشر",
+    "name_transliteration": "Al-Hashr",
+    "type": "Medinan",
+    "revelation_order": 101,
+    "rukus": 3
+  },
+  {
+    "sura": 60,
+    "ayas_count": 13,
+    "first_aya_id": 5150,
+    "name_arabic": "الممتحنة",
+    "name_transliteration": "Al-Mumtahana",
+    "type": "Medinan",
+    "revelation_order": 91,
+    "rukus": 2
+  },
+  {
+    "sura": 61,
+    "ayas_count": 14,
+    "first_aya_id": 5163,
+    "name_arabic": "الصف",
+    "name_transliteration": "As-Saff",
+    "type": "Medinan",
+    "revelation_order": 109,
+    "rukus": 2
+  },
+  {
+    "sura": 62,
+    "ayas_count": 11,
+    "first_aya_id": 5177,
+    "name_arabic": "الجمعة",
+    "name_transliteration": "Al-Jumu'a",
+    "type": "Medinan",
+    "revelation_order": 110,
+    "rukus": 2
+  },
+  {
+    "sura": 63,
+    "ayas_count": 11,
+    "first_aya_id": 5188,
+    "name_arabic": "المنافقون",
+    "name_transliteration": "Al-Munaafiqoon",
+    "type": "Medinan",
+    "revelation_order": 104,
+    "rukus": 2
+  },
+  {
+    "sura": 64,
+    "ayas_count": 18,
+    "first_aya_id": 5199,
+    "name_arabic": "التغابن",
+    "name_transliteration": "At-Taghaabun",
+    "type": "Medinan",
+    "revelation_order": 108,
+    "rukus": 2
+  },
+  {
+    "sura": 65,
+    "ayas_count": 12,
+    "first_aya_id": 5217,
+    "name_arabic": "الطلاق",
+    "name_transliteration": "At-Talaaq",
+    "type": "Medinan",
+    "revelation_order": 99,
+    "rukus": 2
+  },
+  {
+    "sura": 66,
+    "ayas_count": 12,
+    "first_aya_id": 5229,
+    "name_arabic": "التحريم",
+    "name_transliteration": "At-Tahrim",
+    "type": "Medinan",
+    "revelation_order": 107,
+    "rukus": 2
+  },
+  {
+    "sura": 67,
+    "ayas_count": 30,
+    "first_aya_id": 5241,
+    "name_arabic": "الملك",
+    "name_transliteration": "Al-Mulk",
+    "type": "Meccan",
+    "revelation_order": 77,
+    "rukus": 2
+  },
+  {
+    "sura": 68,
+    "ayas_count": 52,
+    "first_aya_id": 5271,
+    "name_arabic": "القلم",
+    "name_transliteration": "Al-Qalam",
+    "type": "Meccan",
+    "revelation_order": 2,
+    "rukus": 2
+  },
+  {
+    "sura": 69,
+    "ayas_count": 52,
+    "first_aya_id": 5323,
+    "name_arabic": "الحاقة",
+    "name_transliteration": "Al-Haaqqa",
+    "type": "Meccan",
+    "revelation_order": 78,
+    "rukus": 2
+  },
+  {
+    "sura": 70,
+    "ayas_count": 44,
+    "first_aya_id": 5375,
+    "name_arabic": "المعارج",
+    "name_transliteration": "Al-Ma'aarij",
+    "type": "Meccan",
+    "revelation_order": 79,
+    "rukus": 2
+  },
+  {
+    "sura": 71,
+    "ayas_count": 28,
+    "first_aya_id": 5419,
+    "name_arabic": "نوح",
+    "name_transliteration": "Nooh",
+    "type": "Meccan",
+    "revelation_order": 71,
+    "rukus": 2
+  },
+  {
+    "sura": 72,
+    "ayas_count": 28,
+    "first_aya_id": 5447,
+    "name_arabic": "الجن",
+    "name_transliteration": "Al-Jinn",
+    "type": "Meccan",
+    "revelation_order": 40,
+    "rukus": 2
+  },
+  {
+    "sura": 73,
+    "ayas_count": 20,
+    "first_aya_id": 5475,
+    "name_arabic": "المزمل",
+    "name_transliteration": "Al-Muzzammil",
+    "type": "Meccan",
+    "revelation_order": 3,
+    "rukus": 2
+  },
+  {
+    "sura": 74,
+    "ayas_count": 56,
+    "first_aya_id": 5495,
+    "name_arabic": "المدثر",
+    "name_transliteration": "Al-Muddaththir",
+    "type": "Meccan",
+    "revelation_order": 4,
+    "rukus": 2
+  },
+  {
+    "sura": 75,
+    "ayas_count": 40,
+    "first_aya_id": 5551,
+    "name_arabic": "القيامة",
+    "name_transliteration": "Al-Qiyaama",
+    "type": "Meccan",
+    "revelation_order": 31,
+    "rukus": 2
+  },
+  {
+    "sura": 76,
+    "ayas_count": 31,
+    "first_aya_id": 5591,
+    "name_arabic": "الانسان",
+    "name_transliteration": "Al-Insaan",
+    "type": "Medinan",
+    "revelation_order": 98,
+    "rukus": 2
+  },
+  {
+    "sura": 77,
+    "ayas_count": 50,
+    "first_aya_id": 5622,
+    "name_arabic": "المرسلات",
+    "name_transliteration": "Al-Mursalaat",
+    "type": "Meccan",
+    "revelation_order": 33,
+    "rukus": 2
+  },
+  {
+    "sura": 78,
+    "ayas_count": 40,
+    "first_aya_id": 5672,
+    "name_arabic": "النبإ",
+    "name_transliteration": "An-Naba",
+    "type": "Meccan",
+    "revelation_order": 80,
+    "rukus": 2
+  },
+  {
+    "sura": 79,
+    "ayas_count": 46,
+    "first_aya_id": 5712,
+    "name_arabic": "النازعات",
+    "name_transliteration": "An-Naazi'aat",
+    "type": "Meccan",
+    "revelation_order": 81,
+    "rukus": 2
+  },
+  {
+    "sura": 80,
+    "ayas_count": 42,
+    "first_aya_id": 5758,
+    "name_arabic": "عبس",
+    "name_transliteration": "Abasa",
+    "type": "Meccan",
+    "revelation_order": 24,
+    "rukus": 1
+  },
+  {
+    "sura": 81,
+    "ayas_count": 29,
+    "first_aya_id": 5800,
+    "name_arabic": "التكوير",
+    "name_transliteration": "At-Takwir",
+    "type": "Meccan",
+    "revelation_order": 7,
+    "rukus": 1
+  },
+  {
+    "sura": 82,
+    "ayas_count": 19,
+    "first_aya_id": 5829,
+    "name_arabic": "الإنفطار",
+    "name_transliteration": "Al-Infitaar",
+    "type": "Meccan",
+    "revelation_order": 82,
+    "rukus": 1
+  },
+  {
+    "sura": 83,
+    "ayas_count": 36,
+    "first_aya_id": 5848,
+    "name_arabic": "المطففين",
+    "name_transliteration": "Al-Mutaffifin",
+    "type": "Meccan",
+    "revelation_order": 86,
+    "rukus": 1
+  },
+  {
+    "sura": 84,
+    "ayas_count": 25,
+    "first_aya_id": 5884,
+    "name_arabic": "الإنشقاق",
+    "name_transliteration": "Al-Inshiqaaq",
+    "type": "Meccan",
+    "revelation_order": 83,
+    "rukus": 1
+  },
+  {
+    "sura": 85,
+    "ayas_count": 22,
+    "first_aya_id": 5909,
+    "name_arabic": "البروج",
+    "name_transliteration": "Al-Burooj",
+    "type": "Meccan",
+    "revelation_order": 27,
+    "rukus": 1
+  },
+  {
+    "sura": 86,
+    "ayas_count": 17,
+    "first_aya_id": 5931,
+    "name_arabic": "الطارق",
+    "name_transliteration": "At-Taariq",
+    "type": "Meccan",
+    "revelation_order": 36,
+    "rukus": 1
+  },
+  {
+    "sura": 87,
+    "ayas_count": 19,
+    "first_aya_id": 5948,
+    "name_arabic": "الأعلى",
+    "name_transliteration": "Al-A'laa",
+    "type": "Meccan",
+    "revelation_order": 8,
+    "rukus": 1
+  },
+  {
+    "sura": 88,
+    "ayas_count": 26,
+    "first_aya_id": 5967,
+    "name_arabic": "الغاشية",
+    "name_transliteration": "Al-Ghaashiya",
+    "type": "Meccan",
+    "revelation_order": 68,
+    "rukus": 1
+  },
+  {
+    "sura": 89,
+    "ayas_count": 30,
+    "first_aya_id": 5993,
+    "name_arabic": "الفجر",
+    "name_transliteration": "Al-Fajr",
+    "type": "Meccan",
+    "revelation_order": 10,
+    "rukus": 1
+  },
+  {
+    "sura": 90,
+    "ayas_count": 20,
+    "first_aya_id": 6023,
+    "name_arabic": "البلد",
+    "name_transliteration": "Al-Balad",
+    "type": "Meccan",
+    "revelation_order": 35,
+    "rukus": 1
+  },
+  {
+    "sura": 91,
+    "ayas_count": 15,
+    "first_aya_id": 6043,
+    "name_arabic": "الشمس",
+    "name_transliteration": "Ash-Shams",
+    "type": "Meccan",
+    "revelation_order": 26,
+    "rukus": 1
+  },
+  {
+    "sura": 92,
+    "ayas_count": 21,
+    "first_aya_id": 6058,
+    "name_arabic": "الليل",
+    "name_transliteration": "Al-Lail",
+    "type": "Meccan",
+    "revelation_order": 9,
+    "rukus": 1
+  },
+  {
+    "sura": 93,
+    "ayas_count": 11,
+    "first_aya_id": 6079,
+    "name_arabic": "الضحى",
+    "name_transliteration": "Ad-Dhuhaa",
+    "type": "Meccan",
+    "revelation_order": 11,
+    "rukus": 1
+  },
+  {
+    "sura": 94,
+    "ayas_count": 8,
+    "first_aya_id": 6090,
+    "name_arabic": "الشرح",
+    "name_transliteration": "Ash-Sharh",
+    "type": "Meccan",
+    "revelation_order": 12,
+    "rukus": 1
+  },
+  {
+    "sura": 95,
+    "ayas_count": 8,
+    "first_aya_id": 6098,
+    "name_arabic": "التين",
+    "name_transliteration": "At-Tin",
+    "type": "Meccan",
+    "revelation_order": 28,
+    "rukus": 1
+  },
+  {
+    "sura": 96,
+    "ayas_count": 19,
+    "first_aya_id": 6106,
+    "name_arabic": "العلق",
+    "name_transliteration": "Al-Alaq",
+    "type": "Meccan",
+    "revelation_order": 1,
+    "rukus": 1
+  },
+  {
+    "sura": 97,
+    "ayas_count": 5,
+    "first_aya_id": 6125,
+    "name_arabic": "القدر",
+    "name_transliteration": "Al-Qadr",
+    "type": "Meccan",
+    "revelation_order": 25,
+    "rukus": 1
+  },
+  {
+    "sura": 98,
+    "ayas_count": 8,
+    "first_aya_id": 6130,
+    "name_arabic": "البينة",
+    "name_transliteration": "Al-Bayyina",
+    "type": "Medinan",
+    "revelation_order": 100,
+    "rukus": 1
+  },
+  {
+    "sura": 99,
+    "ayas_count": 8,
+    "first_aya_id": 6138,
+    "name_arabic": "الزلزلة",
+    "name_transliteration": "Az-Zalzala",
+    "type": "Medinan",
+    "revelation_order": 93,
+    "rukus": 1
+  },
+  {
+    "sura": 100,
+    "ayas_count": 11,
+    "first_aya_id": 6146,
+    "name_arabic": "العاديات",
+    "name_transliteration": "Al-Aadiyaat",
+    "type": "Meccan",
+    "revelation_order": 14,
+    "rukus": 1
+  },
+  {
+    "sura": 101,
+    "ayas_count": 11,
+    "first_aya_id": 6157,
+    "name_arabic": "القارعة",
+    "name_transliteration": "Al-Qaari'a",
+    "type": "Meccan",
+    "revelation_order": 30,
+    "rukus": 1
+  },
+  {
+    "sura": 102,
+    "ayas_count": 8,
+    "first_aya_id": 6168,
+    "name_arabic": "التكاثر",
+    "name_transliteration": "At-Takaathur",
+    "type": "Meccan",
+    "revelation_order": 16,
+    "rukus": 1
+  },
+  {
+    "sura": 103,
+    "ayas_count": 3,
+    "first_aya_id": 6176,
+    "name_arabic": "العصر",
+    "name_transliteration": "Al-Asr",
+    "type": "Meccan",
+    "revelation_order": 13,
+    "rukus": 1
+  },
+  {
+    "sura": 104,
+    "ayas_count": 9,
+    "first_aya_id": 6179,
+    "name_arabic": "الهمزة",
+    "name_transliteration": "Al-Humaza",
+    "type": "Meccan",
+    "revelation_order": 32,
+    "rukus": 1
+  },
+  {
+    "sura": 105,
+    "ayas_count": 5,
+    "first_aya_id": 6188,
+    "name_arabic": "الفيل",
+    "name_transliteration": "Al-Fil",
+    "type": "Meccan",
+    "revelation_order": 19,
+    "rukus": 1
+  },
+  {
+    "sura": 106,
+    "ayas_count": 4,
+    "first_aya_id": 6193,
+    "name_arabic": "قريش",
+    "name_transliteration": "Quraish",
+    "type": "Meccan",
+    "revelation_order": 29,
+    "rukus": 1
+  },
+  {
+    "sura": 107,
+    "ayas_count": 7,
+    "first_aya_id": 6197,
+    "name_arabic": "الماعون",
+    "name_transliteration": "Al-Maa'un",
+    "type": "Meccan",
+    "revelation_order": 17,
+    "rukus": 1
+  },
+  {
+    "sura": 108,
+    "ayas_count": 3,
+    "first_aya_id": 6204,
+    "name_arabic": "الكوثر",
+    "name_transliteration": "Al-Kawthar",
+    "type": "Meccan",
+    "revelation_order": 15,
+    "rukus": 1
+  },
+  {
+    "sura": 109,
+    "ayas_count": 6,
+    "first_aya_id": 6207,
+    "name_arabic": "الكافرون",
+    "name_transliteration": "Al-Kaafiroon",
+    "type": "Meccan",
+    "revelation_order": 18,
+    "rukus": 1
+  },
+  {
+    "sura": 110,
+    "ayas_count": 3,
+    "first_aya_id": 6213,
+    "name_arabic": "النصر",
+    "name_transliteration": "An-Nasr",
+    "type": "Medinan",
+    "revelation_order": 114,
+    "rukus": 1
+  },
+  {
+    "sura": 111,
+    "ayas_count": 5,
+    "first_aya_id": 6216,
+    "name_arabic": "المسد",
+    "name_transliteration": "Al-Masad",
+    "type": "Meccan",
+    "revelation_order": 6,
+    "rukus": 1
+  },
+  {
+    "sura": 112,
+    "ayas_count": 4,
+    "first_aya_id": 6221,
+    "name_arabic": "الإخلاص",
+    "name_transliteration": "Al-Ikhlaas",
+    "type": "Meccan",
+    "revelation_order": 22,
+    "rukus": 1
+  },
+  {
+    "sura": 113,
+    "ayas_count": 5,
+    "first_aya_id": 6225,
+    "name_arabic": "الفلق",
+    "name_transliteration": "Al-Falaq",
+    "type": "Meccan",
+    "revelation_order": 20,
+    "rukus": 1
+  },
+  {
+    "sura": 114,
+    "ayas_count": 6,
+    "first_aya_id": 6230,
+    "name_arabic": "الناس",
+    "name_transliteration": "An-Naas",
+    "type": "Meccan",
+    "revelation_order": 21,
+    "rukus": 1
+  }
+]
