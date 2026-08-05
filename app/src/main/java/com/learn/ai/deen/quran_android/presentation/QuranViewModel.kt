@@ -24,6 +24,7 @@ import javax.inject.Inject
 import com.learn.ai.deen.quran_android.data.model.BookmarkEntity
 import com.learn.ai.deen.quran_android.data.repo.BookmarkRepo
 import com.learn.ai.deen.quran_android.data.repo.QuranTranslationRepo
+import com.learn.ai.deen.quran_android.domain.audio.QuranAudioPlayer
 
 enum class TranslationMode {
     ALL, ENGLISH, URDU, NONE
@@ -42,6 +43,7 @@ class QuranViewModel @Inject constructor(
 
     private val translationRepo = QuranTranslationRepo()
     private val bookmarkRepo = BookmarkRepo()
+    val audioPlayer by lazy { QuranAudioPlayer(context) }
 
     private val _dataState = MutableStateFlow<UIState>(UIState.Loading)
     val dataState: StateFlow<UIState> = _dataState.asStateFlow()
@@ -64,11 +66,39 @@ class QuranViewModel @Inject constructor(
     private val _bookmarkedKeys = MutableStateFlow<Set<String>>(emptySet())
     val bookmarkedKeys: StateFlow<Set<String>> = _bookmarkedKeys.asStateFlow()
 
+    val currentPlayingAya: StateFlow<AyaEntity?> = audioPlayer.currentAya
+    val isAudioPlaying: StateFlow<Boolean> = audioPlayer.isPlaying
+    val isAudioLoading: StateFlow<Boolean> = audioPlayer.isLoading
+
     private val queryVectorizer by lazy { QueryVectorizer(context) }
 
     init {
         loadData()
         refreshBookmarks()
+    }
+
+    fun playAyaAudio(aya: AyaEntity, suraPlaylist: List<AyaEntity> = emptyList()) {
+        audioPlayer.playAya(aya, suraPlaylist)
+    }
+
+    fun pauseAudio() {
+        audioPlayer.pause()
+    }
+
+    fun resumeAudio() {
+        audioPlayer.resume()
+    }
+
+    fun stopAudio() {
+        audioPlayer.stop()
+    }
+
+    fun playNextAudio() {
+        audioPlayer.playNext()
+    }
+
+    fun playPreviousAudio() {
+        audioPlayer.playPrevious()
     }
 
     fun refreshBookmarks() {
@@ -190,5 +220,6 @@ class QuranViewModel @Inject constructor(
     override fun onCleared() {
         super.onCleared()
         queryVectorizer.close()
+        audioPlayer.release()
     }
 }

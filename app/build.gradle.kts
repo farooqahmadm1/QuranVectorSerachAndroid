@@ -53,6 +53,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation("androidx.compose.material:material-icons-extended")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -74,4 +75,5 @@ dependencies {
     implementation(libs.androidx.hilt.navigation.fragment)
     implementation("org.tensorflow:tensorflow-lite-task-text:0.4.4")
     implementation("com.google.mediapipe:tasks-text:0.10.14")
+    implementation("androidx.media3:media3-exoplayer:1.5.1")
 }
