@@ -14,6 +14,9 @@ data class AyaEntity(
     var aya: Long = 0,
     var text: String? = null,
     var md5: String? = null,
+    var translationEn: String? = null,
+    var translationUr: String? = null,
+    var tafsir: String? = null,
     @HnswIndex(dimensions = 256, distanceType = VectorDistanceType.DEFAULT)
     var embedding: FloatArray? = null
 ) {
@@ -23,6 +26,9 @@ data class AyaEntity(
         result = 31 * result + aya.hashCode()
         result = 31 * result + (text?.hashCode() ?: 0)
         result = 31 * result + (md5?.hashCode() ?: 0)
+        result = 31 * result + (translationEn?.hashCode() ?: 0)
+        result = 31 * result + (translationUr?.hashCode() ?: 0)
+        result = 31 * result + (tafsir?.hashCode() ?: 0)
         result = 31 * result + (embedding?.contentHashCode() ?: 0)
         return result
     }
@@ -38,6 +44,9 @@ data class AyaEntity(
         if (aya != other.aya) return false
         if (text != other.text) return false
         if (md5 != other.md5) return false
+        if (translationEn != other.translationEn) return false
+        if (translationUr != other.translationUr) return false
+        if (tafsir != other.tafsir) return false
         if (embedding != null) {
             if (other.embedding == null) return false
             if (!embedding.contentEquals(other.embedding)) return false
@@ -47,7 +56,6 @@ data class AyaEntity(
     }
 
     override fun toString(): String {
-        return "AyaEntity(id=$id, sura=$sura, aya=$aya, text='$text', md5=$md5, embedding=${embedding?.contentToString()})"
+        return "AyaEntity(id=$id, sura=$sura, aya=$aya, text='$text', translationEn=$translationEn, translationUr=$translationUr, tafsir=$tafsir)"
     }
-
 }

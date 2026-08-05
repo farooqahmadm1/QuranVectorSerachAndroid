@@ -21,6 +21,12 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
+import com.learn.ai.deen.quran_android.data.repo.QuranTranslationRepo
+
+enum class TranslationMode {
+    ALL, ENGLISH, URDU, NONE
+}
+
 sealed class UIState {
     data class Success(val data: List<ChapterEntity>) : UIState()
     data object Loading : UIState()
@@ -32,6 +38,8 @@ class QuranViewModel @Inject constructor(
     @ApplicationContext private val context: Context
 ) : ViewModel() {
 
+    private val translationRepo = QuranTranslationRepo()
+
     private val _dataState = MutableStateFlow<UIState>(UIState.Loading)
     val dataState: StateFlow<UIState> = _dataState.asStateFlow()
 
@@ -41,10 +49,24 @@ class QuranViewModel @Inject constructor(
     private val _isSearching = MutableStateFlow(false)
     val isSearching: StateFlow<Boolean> = _isSearching.asStateFlow()
 
+    private val _translationMode = MutableStateFlow(TranslationMode.ALL)
+    val translationMode: StateFlow<TranslationMode> = _translationMode.asStateFlow()
+
+    private val _selectedTafsirAya = MutableStateFlow<AyaEntity?>(null)
+    val selectedTafsirAya: StateFlow<AyaEntity?> = _selectedTafsirAya.asStateFlow()
+
     private val queryVectorizer by lazy { QueryVectorizer(context) }
 
     init {
         loadData()
+    }
+
+    fun setTranslationMode(mode: TranslationMode) {
+        _translationMode.value = mode
+    }
+
+    fun setTafsirAya(aya: AyaEntity?) {
+        _selectedTafsirAya.value = aya
     }
 
     fun loadData() {
@@ -83,7 +105,7 @@ class QuranViewModel @Inject constructor(
             val query = ayaBox.query(AyaEntity_.sura.equal(suraId)).build()
             val result = query.find()
             query.close()
-            result
+            result.map { translationRepo.enrichAya(it) }
         } catch (e: Exception) {
             Log.e("QuranViewModel", "Error loading ayas for sura ID: $suraId", e)
             emptyList()
@@ -104,7 +126,7 @@ class QuranViewModel @Inject constructor(
                     val box = ObjectBox.ayaBox
                     if (box != null) {
                         val query = box.query(AyaEntity_.embedding.nearestNeighbors(queryEmbedding, 20)).build()
-                        val results = query.find()
+                        val results = query.find().map { translationRepo.enrichAya(it) }
                         query.close()
                         _searchResults.value = results
                     } else {
