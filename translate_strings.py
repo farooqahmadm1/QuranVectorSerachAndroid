@@ -1,6 +1,4 @@
-# prompt: i want to create python script that will use open source ai model to translate the android string.xml file for other languages...
-# # i have already strings.xml file in values folder for ur(urdu) and ar(arabic) lanauges.. i want to translate it
-!pip install lxml transformers torch
+# Run: pip install lxml transformers torch
 
 
 import xml.etree.ElementTree as ET

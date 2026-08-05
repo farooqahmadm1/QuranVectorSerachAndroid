@@ -13,17 +13,17 @@ class FileRepo {
      * @param fileName The name of the JSON file to read.
      * @return The content of the JSON file as a String, or null if an error occurs.
      */
-    suspend fun readJsonFromAssets(context: Context, fileName: String): String? = withContext(Dispatchers.Main) {
+    suspend fun readJsonFromAssets(context: Context, fileName: String): String? = withContext(Dispatchers.IO) {
         try {
             context.assets.open(fileName).bufferedReader().use { it.readText() }
         } catch (ioException: IOException) {
-            Log.e("QuranViewModel", "Error reading asset file: $fileName", ioException)
+            Log.e("FileRepo", "Error reading asset file: $fileName", ioException)
             null
         } catch (outOfMemoryError: OutOfMemoryError) {
-            Log.e("QuranViewModel", "Out of memory while reading asset file: $fileName", outOfMemoryError)
+            Log.e("FileRepo", "Out of memory while reading asset file: $fileName", outOfMemoryError)
             null
         } catch (e: Exception) {
-            Log.e("QuranViewModel", "Unexpected error reading asset file: $fileName", e)
+            Log.e("FileRepo", "Unexpected error reading asset file: $fileName", e)
             null
         }
     }

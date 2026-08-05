@@ -18,18 +18,14 @@ class QuranJsonRepo constructor(
 ) {
     private val fileRepo = FileRepo()
 
-    suspend fun loadAyasFromJsonAndStore(fileName: String) = withContext(Dispatchers.IO) {
+    suspend fun loadAyasFromJsonAndStore() = withContext(Dispatchers.IO) {
         try {
-            // 1. Read JSON from assets
+            val jsonParser = Json { isLenient = true; ignoreUnknownKeys = true }
             repeat(114) { index ->
-                val jsonString = fileRepo.readJsonFromAssets(context,"quran_sura_${index + 1}.json")
+                val jsonString = fileRepo.readJsonFromAssets(context, "quran_sura_${index + 1}.json")
                 if (jsonString != null) {
-                    // 2. Parse JSON
-                    //    Configure Json parser to be lenient if your JSON is not strictly formatted
-                    val jsonParser = Json { isLenient = true; ignoreUnknownKeys = true }
                     val jsonAyas = jsonParser.decodeFromString<List<AyaModel>>(jsonString)
 
-                    // 3. Map to ObjectBox Entities
                     val ayaEntities = jsonAyas.map { jsonAya ->
                         AyaEntity(
                             sura = jsonAya.sura,
@@ -39,24 +35,18 @@ class QuranJsonRepo constructor(
                             embedding = jsonAya.embedding.map { it.toFloat() }.toFloatArray()
                         )
                     }
-                    // 4. Insert into ObjectBox
                     ObjectBox.ayaBox?.put(ayaEntities)
-                    Log.d("****", "Successfully loaded and stored ${ayaEntities.size} Ayas from JSON.")
-                    delay(1000)
+                    Log.d("QuranJsonRepo", "Successfully loaded sura ${index + 1} with ${ayaEntities.size} Ayas.")
                 } else {
-                    Log.e("****", "JSON file content is null.")
-                    //_dataState.value = UIState.Error // Or handle appropriately
+                    Log.e("QuranJsonRepo", "JSON file content is null for sura ${index + 1}.")
                 }
             }
         } catch (e: IOException) {
-            Log.e("****", "Error reading JSON file: ${e.message}", e)
-            // _dataState.value = UIState.Error
+            Log.e("QuranJsonRepo", "Error reading JSON file: ${e.message}", e)
         } catch (e: kotlinx.serialization.SerializationException) {
-            Log.e("****", "Error parsing JSON: ${e.message}", e)
-            // _dataState.value = UIState.Error
+            Log.e("QuranJsonRepo", "Error parsing JSON: ${e.message}", e)
         } catch (e: Exception) {
-            Log.e("****", "Error loading data from JSON: ${e.message}", e)
-            // _dataState.value = UIState.Error
+            Log.e("QuranJsonRepo", "Error loading data from JSON: ${e.message}", e)
         }
     }
 }

@@ -2,14 +2,14 @@ package com.learn.ai.deen.quran_android.domain
 
 import android.content.Context
 import android.util.Log
-import org.tensorflow.lite.task.core.BaseOptions
-import org.tensorflow.lite.task.text.textembedder.TextEmbedder
-import org.tensorflow.lite.task.text.textembedder.TextEmbedder.TextEmbedderOptions
+import com.google.mediapipe.tasks.core.BaseOptions
+import com.google.mediapipe.tasks.text.textembedder.TextEmbedder
+import com.google.mediapipe.tasks.text.textembedder.TextEmbedder.TextEmbedderOptions
 
 class QueryVectorizer(private val context: Context) {
 
     private var textEmbedder: TextEmbedder? = null
-    private val modelPath = "text_embedder.tflite" // Replace with your model's filename
+    private val modelPath = "vector_search_model.tflite"
 
     init {
         initializeTextEmbedder()
@@ -17,20 +17,18 @@ class QueryVectorizer(private val context: Context) {
 
     private fun initializeTextEmbedder() {
         try {
-            val baseOptionsBuilder = BaseOptions.builder()
-            // Optional: Add GPU delegate for acceleration if your model supports it
-            // baseOptionsBuilder.useGpu()
-
-            val options = TextEmbedderOptions.builder()
-                .setBaseOptions(baseOptionsBuilder.build())
+            val baseOptions = BaseOptions.builder()
+                .setModelAssetPath(modelPath)
                 .build()
 
-            // Create the TextEmbedder from the model file in assets
-            textEmbedder = TextEmbedder.createFromFileAndOptions(context, modelPath, options)
+            val options = TextEmbedderOptions.builder()
+                .setBaseOptions(baseOptions)
+                .build()
+
+            textEmbedder = TextEmbedder.createFromOptions(context, options)
             Log.i("QueryVectorizer", "TextEmbedder initialized successfully.")
         } catch (e: Exception) {
             Log.e("QueryVectorizer", "Error initializing TextEmbedder: ${e.message}", e)
-            // Handle the error appropriately, e.g., show a message to the user
         }
     }
 

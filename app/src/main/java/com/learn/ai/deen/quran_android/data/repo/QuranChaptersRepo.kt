@@ -41,20 +41,16 @@ class QuranChaptersRepo(val context: Context) {
                 }
                 // 4. Insert into ObjectBox
                 ObjectBox.chapterBox?.put(chapterEntities)
-                Log.d("****", "Successfully loaded and stored ${chapterEntities.size} Chapter from JSON.")
+                Log.d("QuranChaptersRepo", "Successfully loaded and stored ${chapterEntities.size} chapters from JSON.")
             } else {
-                Log.e("****", "JSON file content is null.")
-                //_dataState.value = UIState.Error // Or handle appropriately
+                Log.e("QuranChaptersRepo", "JSON file content for chapters.json is null.")
             }
         } catch (e: IOException) {
-            Log.e("****", "Error reading JSON file: ${e.message}", e)
-            // _dataState.value = UIState.Error
+            Log.e("QuranChaptersRepo", "Error reading JSON file: ${e.message}", e)
         } catch (e: kotlinx.serialization.SerializationException) {
-            Log.e("****", "Error parsing JSON: ${e.message}", e)
-            // _dataState.value = UIState.Error
+            Log.e("QuranChaptersRepo", "Error parsing JSON: ${e.message}", e)
         } catch (e: Exception) {
-            Log.e("****", "Error loading data from JSON: ${e.message}", e)
-            // _dataState.value = UIState.Error
+            Log.e("QuranChaptersRepo", "Error loading data from JSON: ${e.message}", e)
         }
     }
 }

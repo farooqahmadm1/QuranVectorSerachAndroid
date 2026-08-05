@@ -71,5 +71,6 @@ dependencies {
 
 
     implementation(libs.androidx.hilt.navigation.fragment)
-    implementation(libs.litert)
+    implementation("org.tensorflow:tensorflow-lite-task-text:0.4.4")
+    implementation("com.google.mediapipe:tasks-text:0.10.14")
 }

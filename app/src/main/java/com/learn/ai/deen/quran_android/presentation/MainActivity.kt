@@ -63,6 +63,6 @@ fun NavigationDemo(viewModel: QuranViewModel) {
 sealed class Screen() {
     data object SuraList : Screen()
     data class Sura(val chapter: ChapterEntity) : Screen()
-    data class SuraSearchScreen(val chapter: ChapterEntity) : Screen()
+    data class SuraSearchScreen(val chapter: ChapterEntity? = null) : Screen()
 }
 

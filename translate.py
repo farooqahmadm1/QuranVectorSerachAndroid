@@ -1,7 +1,6 @@
 # prompt: i want to create python script that will use open source ai model to translate the android string.xml file for other languages...
 
-# Install necessary libraries
-!pip install lxml transformers torch
+# Run: pip install lxml transformers torch
 
 import xml.etree.ElementTree as ET
 from transformers import MarianMTModel, MarianTokenizer
