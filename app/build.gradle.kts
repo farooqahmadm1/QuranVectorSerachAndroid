@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("com.google.dagger.hilt.android")
     id("io.objectbox")
     id("com.google.devtools.ksp")
     id("kotlinx-serialization")
@@ -61,7 +62,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation(libs.hilt.android)
-//    ksp(libs.hilt.android.compiler)
+    ksp(libs.hilt.android.compiler)
 
 
     implementation(libs.androidx.navigation3.ui)
