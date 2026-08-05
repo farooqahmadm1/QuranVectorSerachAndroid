@@ -13,17 +13,18 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -57,6 +58,9 @@ fun SuraScreen(
     var ayas by remember { mutableStateOf(emptyList<AyaEntity>()) }
     val translationMode by viewModel.translationMode.collectAsStateWithLifecycle()
     val selectedTafsirAya by viewModel.selectedTafsirAya.collectAsStateWithLifecycle()
+    val bookmarkedKeys by viewModel.bookmarkedKeys.collectAsStateWithLifecycle()
+
+    var bookmarkDialogAya by remember { mutableStateOf<AyaEntity?>(null) }
 
     LaunchedEffect(chapter.id) {
         ayas = viewModel.loadSuraById(chapter.id)
@@ -102,7 +106,16 @@ fun SuraScreen(
             SuraContent(
                 ayas = ayas,
                 translationMode = translationMode,
-                onShowTafsir = { aya -> viewModel.setTafsirAya(aya) }
+                bookmarkedKeys = bookmarkedKeys,
+                onShowTafsir = { aya -> viewModel.setTafsirAya(aya) },
+                onToggleBookmark = { aya ->
+                    val key = "${aya.sura}:${aya.aya}"
+                    if (bookmarkedKeys.contains(key)) {
+                        viewModel.toggleBookmark(aya.sura, aya.aya)
+                    } else {
+                        bookmarkDialogAya = aya
+                    }
+                }
             )
         }
 
@@ -110,6 +123,18 @@ fun SuraScreen(
             TafsirDialog(
                 aya = aya,
                 onDismiss = { viewModel.setTafsirAya(null) }
+            )
+        }
+
+        bookmarkDialogAya?.let { aya ->
+            AddBookmarkNoteDialog(
+                sura = aya.sura,
+                aya = aya.aya,
+                onDismiss = { bookmarkDialogAya = null },
+                onSave = { note ->
+                    viewModel.toggleBookmark(aya.sura, aya.aya, note)
+                    bookmarkDialogAya = null
+                }
             )
         }
     }
@@ -153,14 +178,19 @@ fun TranslationFilterRow(
 fun SuraContent(
     ayas: List<AyaEntity>,
     translationMode: TranslationMode,
-    onShowTafsir: (AyaEntity) -> Unit
+    bookmarkedKeys: Set<String>,
+    onShowTafsir: (AyaEntity) -> Unit,
+    onToggleBookmark: (AyaEntity) -> Unit
 ) {
     LazyColumn {
         items(ayas) { aya ->
+            val isBookmarked = bookmarkedKeys.contains("${aya.sura}:${aya.aya}")
             AyaCardItem(
                 aya = aya,
                 translationMode = translationMode,
-                onShowTafsir = { onShowTafsir(aya) }
+                isBookmarked = isBookmarked,
+                onShowTafsir = { onShowTafsir(aya) },
+                onToggleBookmark = { onToggleBookmark(aya) }
             )
         }
     }
@@ -170,7 +200,9 @@ fun SuraContent(
 fun AyaCardItem(
     aya: AyaEntity,
     translationMode: TranslationMode,
-    onShowTafsir: () -> Unit
+    isBookmarked: Boolean,
+    onShowTafsir: () -> Unit,
+    onToggleBookmark: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -188,12 +220,21 @@ fun AyaCardItem(
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.primary
             )
-            IconButton(onClick = onShowTafsir) {
-                Icon(
-                    imageVector = Icons.Default.Info,
-                    contentDescription = "Tafsir",
-                    tint = MaterialTheme.colorScheme.secondary
-                )
+            Row {
+                IconButton(onClick = onToggleBookmark) {
+                    Icon(
+                        imageVector = if (isBookmarked) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
+                        contentDescription = "Bookmark",
+                        tint = if (isBookmarked) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.outline
+                    )
+                }
+                IconButton(onClick = onShowTafsir) {
+                    Icon(
+                        imageVector = Icons.Default.Info,
+                        contentDescription = "Tafsir",
+                        tint = MaterialTheme.colorScheme.secondary
+                    )
+                }
             }
         }
 
@@ -263,6 +304,45 @@ fun TafsirDialog(
         confirmButton = {
             TextButton(onClick = onDismiss) {
                 Text("Close")
+            }
+        }
+    )
+}
+
+@Composable
+fun AddBookmarkNoteDialog(
+    sura: Long,
+    aya: Long,
+    onDismiss: () -> Unit,
+    onSave: (String) -> Unit
+) {
+    var noteText by remember { mutableStateOf("") }
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Bookmark Verse $sura:$aya") },
+        text = {
+            Column {
+                Text("Add an optional reflection or note for this bookmark:", style = MaterialTheme.typography.bodySmall)
+                Spacer(modifier = Modifier.height(8.dp))
+                OutlinedTextField(
+                    value = noteText,
+                    onValueChange = { noteText = it },
+                    label = { Text("Custom Note") },
+                    placeholder = { Text("e.g. Favorite verse on patience...") },
+                    modifier = Modifier.fillMaxWidth(),
+                    minLines = 2
+                )
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = { onSave(noteText) }) {
+                Text("Save Bookmark")
+            }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) {
+                Text("Cancel")
             }
         }
     )

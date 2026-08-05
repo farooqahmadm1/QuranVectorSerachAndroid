@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
@@ -40,6 +41,12 @@ fun SuraListScreen(backStack: SnapshotStateList<Screen>, viewModel: QuranViewMod
             TopAppBar(
                 title = { Text("Quran Vector Search") },
                 actions = {
+                    IconButton(onClick = { backStack.add(Screen.Bookmarks) }) {
+                        Icon(
+                            imageVector = Icons.Default.Favorite,
+                            contentDescription = "Bookmarks"
+                        )
+                    }
                     IconButton(onClick = { backStack.add(Screen.SuraSearchScreen()) }) {
                         Icon(
                             imageVector = Icons.Default.Search,

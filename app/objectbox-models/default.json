@@ -112,9 +112,43 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "3:4188707330933078399",
+      "lastPropertyId": "5:2409191080562770008",
+      "name": "BookmarkEntity",
+      "properties": [
+        {
+          "id": "1:673886658340800600",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6138083036245907256",
+          "name": "sura",
+          "type": 6
+        },
+        {
+          "id": "3:3448034573582392734",
+          "name": "aya",
+          "type": 6
+        },
+        {
+          "id": "4:6790776237877149704",
+          "name": "note",
+          "type": 9
+        },
+        {
+          "id": "5:2409191080562770008",
+          "name": "timestamp",
+          "type": 6
+        }
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "2:6765998920968946937",
+  "lastEntityId": "3:4188707330933078399",
   "lastIndexId": "2:1869925846410309555",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",

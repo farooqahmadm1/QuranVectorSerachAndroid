@@ -17,6 +17,7 @@ import androidx.navigation3.runtime.NavEntry
 import androidx.navigation3.ui.NavDisplay
 import com.learn.ai.deen.quran_android.data.model.ChapterEntity
 import com.learn.ai.deen.quran_android.presentation.theme.QuranVectorSerachAndroidTheme
+import com.learn.ai.deen.quran_android.presentation.ui.BookmarksScreen
 import com.learn.ai.deen.quran_android.presentation.ui.SuraListScreen
 import com.learn.ai.deen.quran_android.presentation.ui.SuraScreen
 import com.learn.ai.deen.quran_android.presentation.ui.search.SuraSearchScreen
@@ -53,7 +54,10 @@ fun NavigationDemo(viewModel: QuranViewModel) {
                     SuraScreen(backStack, viewModel, key.chapter)
                 }
                 is Screen.SuraSearchScreen -> NavEntry(key) {
-                    SuraSearchScreen(backStack, viewModel, key.chapter) // Assuming you want to show the same screen
+                    SuraSearchScreen(backStack, viewModel, key.chapter)
+                }
+                Screen.Bookmarks -> NavEntry(key) {
+                    BookmarksScreen(backStack, viewModel)
                 }
             }
         })
@@ -62,6 +66,7 @@ fun NavigationDemo(viewModel: QuranViewModel) {
 
 sealed class Screen() {
     data object SuraList : Screen()
+    data object Bookmarks : Screen()
     data class Sura(val chapter: ChapterEntity) : Screen()
     data class SuraSearchScreen(val chapter: ChapterEntity? = null) : Screen()
 }

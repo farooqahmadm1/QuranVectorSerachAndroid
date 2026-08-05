@@ -21,6 +21,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
+import com.learn.ai.deen.quran_android.data.model.BookmarkEntity
+import com.learn.ai.deen.quran_android.data.repo.BookmarkRepo
 import com.learn.ai.deen.quran_android.data.repo.QuranTranslationRepo
 
 enum class TranslationMode {
@@ -39,6 +41,7 @@ class QuranViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val translationRepo = QuranTranslationRepo()
+    private val bookmarkRepo = BookmarkRepo()
 
     private val _dataState = MutableStateFlow<UIState>(UIState.Loading)
     val dataState: StateFlow<UIState> = _dataState.asStateFlow()
@@ -55,10 +58,50 @@ class QuranViewModel @Inject constructor(
     private val _selectedTafsirAya = MutableStateFlow<AyaEntity?>(null)
     val selectedTafsirAya: StateFlow<AyaEntity?> = _selectedTafsirAya.asStateFlow()
 
+    private val _bookmarks = MutableStateFlow<List<BookmarkEntity>>(emptyList())
+    val bookmarks: StateFlow<List<BookmarkEntity>> = _bookmarks.asStateFlow()
+
+    private val _bookmarkedKeys = MutableStateFlow<Set<String>>(emptySet())
+    val bookmarkedKeys: StateFlow<Set<String>> = _bookmarkedKeys.asStateFlow()
+
     private val queryVectorizer by lazy { QueryVectorizer(context) }
 
     init {
         loadData()
+        refreshBookmarks()
+    }
+
+    fun refreshBookmarks() {
+        viewModelScope.launch(Dispatchers.IO) {
+            val list = bookmarkRepo.getAllBookmarks()
+            _bookmarks.value = list
+            _bookmarkedKeys.value = list.map { "${it.sura}:${it.aya}" }.toSet()
+        }
+    }
+
+    fun toggleBookmark(sura: Long, aya: Long, note: String = "") {
+        viewModelScope.launch(Dispatchers.IO) {
+            if (bookmarkRepo.isBookmarked(sura, aya)) {
+                bookmarkRepo.removeBookmark(sura, aya)
+            } else {
+                bookmarkRepo.addBookmark(sura, aya, note)
+            }
+            refreshBookmarks()
+        }
+    }
+
+    fun updateBookmarkNote(sura: Long, aya: Long, note: String) {
+        viewModelScope.launch(Dispatchers.IO) {
+            bookmarkRepo.addBookmark(sura, aya, note)
+            refreshBookmarks()
+        }
+    }
+
+    fun deleteBookmarkById(id: Long) {
+        viewModelScope.launch(Dispatchers.IO) {
+            bookmarkRepo.deleteBookmarkById(id)
+            refreshBookmarks()
+        }
     }
 
     fun setTranslationMode(mode: TranslationMode) {
